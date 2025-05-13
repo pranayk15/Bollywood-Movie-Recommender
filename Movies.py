@@ -1,6 +1,6 @@
 import streamlit as st
 import pickle
-
+import pandas as pd
 def recommend(movie):
     index=df[df['title']==movie].index[0]
     distances=similarity[index]
@@ -14,8 +14,8 @@ def recommend(movie):
 
 
 st.header("Movie Recommender System")
-df=pickle.load(open('movie_list.pkl','rb'))
-similarity=pickle.load(open('similarity.pkl','rb'))
+df=pd.read_pickle(open('movie_list.pkl','rb'))
+similarity=pd.read_pickle(open('similarity.pkl','rb'))
 movie_list=df['title'].values
 poster_path=df['poster_path'].values
 # st.text(poster_path)
