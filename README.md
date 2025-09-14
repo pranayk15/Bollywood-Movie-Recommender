@@ -7,8 +7,8 @@ A simple and effective content-based recommendation system built using Python an
 - 🔍 Content-based filtering using movie metadata (title, genres, cast, director)
 - 📊 Uses cosine similarity to find and recommend similar movies
 - 🧠 Built with popular Python libraries (Pandas, Scikit-learn)
-- 🌐 Clean and interactive frontend (if applicable - Streamlit or Flask)
-- 📁 Dataset: Bollywood movies dataset (custom or from Kaggle)
+- 🌐 Clean and interactive frontend (with Streamlit)
+- 📁 Dataset: Bollywood movies dataset (from Kaggle)
 
 ---
 
@@ -17,21 +17,10 @@ A simple and effective content-based recommendation system built using Python an
 - **Language:** Python
 - **Libraries:** Pandas, NumPy, Scikit-learn, Pickle
 - **Model:** Cosine Similarity (Content-based Filtering)
-- **Web Framework:** Streamlit / Flask *(if applicable)*
+- **Web Framework:** Streamlit 
 - **IDE:** Jupyter Notebook / VS Code
 
 ---
-## 📂 Project Structure
-bollywood-recommender/
-├── dataset/
-│   └── movies.csv
-├── recommender.ipynb
-├── app.py                
-├── model.pkl                # Saved similarity model
-├── requirements.txt         # List of required Python packages
-├── README.md                # Project documentation
-└── LICENSE                  # (Optional) License for open-source use
-
 
 ---
 
@@ -42,6 +31,50 @@ bollywood-recommender/
 3. Text data is vectorized using **TF-IDF** or **CountVectorizer**.
 4. **Cosine similarity** is used to compute similarity scores between movies.
 5. When a user searches for a movie, the system returns top similar movies.
+          ┌───────────────────────┐
+          │   Import Dataset      │
+          └─────────┬─────────────┘
+                    │
+          ┌─────────▼─────────────┐
+          │   Data Preprocessing  │
+          │ - Handle nulls        │
+          │ - Clean text          │
+          └─────────┬─────────────┘
+                    │
+          ┌─────────▼─────────────┐
+          │  Feature Engineering  │
+          │ - Combine columns     │
+          │   (title, genres,     │
+          │    cast, director)    │
+          └─────────┬─────────────┘
+                    │
+          ┌─────────▼─────────────┐
+          │ Vectorization (TF-IDF │
+          │   or CountVectorizer)│
+          └─────────┬─────────────┘
+                    │
+          ┌─────────▼─────────────┐
+          │  Similarity Matrix    │
+          │   (Cosine Similarity) │
+          └─────────┬─────────────┘
+                    │
+          ┌─────────▼─────────────┐
+          │   Recommendation Logic│
+          │ - User inputs movie   │
+          │ - Return top N similar│
+          └─────────┬─────────────┘
+                    │
+          ┌─────────▼─────────────┐
+          │   Frontend (optional) │
+          │ - Streamlit or Flask  │
+          └─────────┬─────────────┘
+                    │
+          ┌─────────▼─────────────┐
+          │     Output UI/API     │
+          │ - Show recommended    │
+          │   Bollywood movies    │
+          └───────────────────────┘
+
 
 ---
 
@@ -49,19 +82,18 @@ bollywood-recommender/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/bollywood-recommender.git
+git clone https://github.com/pranayk15/Bollywood-Movie-Recommender.git
+cd Bollywood-Movie-Recommender
 
-# 2. Navigate to project directory
-cd bollywood-recommender
+# 2. Create a Virtual Environment
+python -m venv venv
+venv\Scripts\activate
 
-# 3. Install dependencies
+# 3. Install required dependencies
 pip install -r requirements.txt
 
 # 4. Run the app (if using Streamlit or Flask)
 streamlit run app.py
 # or
 python app.py
-
-
-
 
