@@ -31,49 +31,6 @@ A simple and effective content-based recommendation system built using Python an
 3. Text data is vectorized using **TF-IDF** or **CountVectorizer**.
 4. **Cosine similarity** is used to compute similarity scores between movies.
 5. When a user searches for a movie, the system returns top similar movies.
-          ┌───────────────────────┐
-          │   Import Dataset      │
-          └─────────┬─────────────┘
-                    │
-          ┌─────────▼─────────────┐
-          │   Data Preprocessing  │
-          │ - Handle nulls        │
-          │ - Clean text          │
-          └─────────┬─────────────┘
-                    │
-          ┌─────────▼─────────────┐
-          │  Feature Engineering  │
-          │ - Combine columns     │
-          │   (title, genres,     │
-          │    cast, director)    │
-          └─────────┬─────────────┘
-                    │
-          ┌─────────▼─────────────┐
-          │ Vectorization (TF-IDF │
-          │   or CountVectorizer)│
-          └─────────┬─────────────┘
-                    │
-          ┌─────────▼─────────────┐
-          │  Similarity Matrix    │
-          │   (Cosine Similarity) │
-          └─────────┬─────────────┘
-                    │
-          ┌─────────▼─────────────┐
-          │   Recommendation Logic│
-          │ - User inputs movie   │
-          │ - Return top N similar│
-          └─────────┬─────────────┘
-                    │
-          ┌─────────▼─────────────┐
-          │   Frontend (optional) │
-          │ - Streamlit or Flask  │
-          └─────────┬─────────────┘
-                    │
-          ┌─────────▼─────────────┐
-          │     Output UI/API     │
-          │ - Show recommended    │
-          │   Bollywood movies    │
-          └───────────────────────┘
 
 
 ---
