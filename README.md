@@ -22,7 +22,7 @@ A simple and effective content-based recommendation system built using Python an
 
 ---
 📁 bollywood-recommender
-bollywood-recommender/
+'''bollywood-recommender/
 ├── dataset/
 │   └── movies.csv
 ├── recommender.ipynb
@@ -30,7 +30,7 @@ bollywood-recommender/
 ├── model.pkl                # Saved similarity model
 ├── requirements.txt         # Project dependencies
 ├── README.md                # Project documentation
-└── LICENSE                  # (Optional) License file
+└── LICENSE                  # (Optional) License file'''
 
 
 ---
