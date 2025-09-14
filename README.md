@@ -25,7 +25,7 @@ A simple and effective content-based recommendation system built using Python an
 ├── dataset/
 │ └── movies.csv
 ├── recommender.ipynb
-├── app.py (if using Flask/Streamlit)
+├── app.py (Streamlit)
 ├── model.pkl
 ├── README.md
 └── requirements.txt
