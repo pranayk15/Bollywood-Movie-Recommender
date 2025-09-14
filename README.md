@@ -21,14 +21,17 @@ A simple and effective content-based recommendation system built using Python an
 - **IDE:** Jupyter Notebook / VS Code
 
 ---
-📁 bollywood-recommender
+## 📂 Project Structure
+bollywood-recommender/
 ├── dataset/
-│ └── movies.csv
+│   └── movies.csv
 ├── recommender.ipynb
-├── app.py (Streamlit)
-├── model.pkl
-├── README.md
-└── requirements.txt
+├── app.py                
+├── model.pkl                # Saved similarity model
+├── requirements.txt         # List of required Python packages
+├── README.md                # Project documentation
+└── LICENSE                  # (Optional) License for open-source use
+
 
 ---
 
@@ -60,5 +63,5 @@ streamlit run app.py
 python app.py
 
 
-## 📂 Project Structure
+
 
