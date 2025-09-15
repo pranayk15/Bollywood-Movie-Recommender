@@ -27,17 +27,18 @@ if st.button('Recommend'):
     col1,col2,col3,col4,col5=st.columns(5)
     with col1:
         st.write(recommended_movie[0])
-        st.image(recommended_poster[0])
+        st.image(recommended_poster[0],width=200)
     with col2:
         st.write(recommended_movie[1])
-        st.image(recommended_poster[1])
+        st.image(recommended_poster[1],width=200)
     with col3:
         st.write(recommended_movie[2])
-        st.image(recommended_poster[2])
+        st.image(recommended_poster[2],width=200)
     with col4:
         st.write(recommended_movie[3])
-        st.image(recommended_poster[3])
+        st.image(recommended_poster[3],width=200)
     with col5:
         st.write(recommended_movie[4])
-        st.image(recommended_poster[4])
+        st.image(recommended_poster[4],width=200)
+
 
